@@ -1,11 +1,12 @@
 package jrpricing.domain.model.superExpressSurcharge.freeSeat;
 
-import jrpricing.domain.Fare;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @AllArgsConstructor
-public class FreeSeatPolicy {
+@EqualsAndHashCode
+public class SeatType {
     @Getter
-    private final Fare discountValue = new Fare(530);
+    private final SeatTypeName seatTypeName;
 }

@@ -1,8 +1,8 @@
 package jrpricing.application.repository;
 
 import jrpricing.domain.Fare;
-import jrpricing.domain.model.station.Station;
+import jrpricing.domain.model.route.Route;
 
 public interface SuperExpressSurchargeRepository {
-    Fare findSuperSurcharge(Station departure, Station destination);
+    Fare findSuperSurcharge(Route route);
 }

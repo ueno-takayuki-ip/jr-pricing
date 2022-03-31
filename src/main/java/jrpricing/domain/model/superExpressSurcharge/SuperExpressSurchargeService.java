@@ -2,20 +2,22 @@ package jrpricing.domain.model.superExpressSurcharge;
 
 import jrpricing.application.repository.SuperExpressSurchargeRepository;
 import jrpricing.domain.Fare;
-import jrpricing.domain.model.station.Station;
+import jrpricing.domain.model.route.Route;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
 @Service
 public class SuperExpressSurchargeService {
+    @Autowired
     SuperExpressSurchargeRepository superExpressSurchargeRepository;
 
-    public Fare surchargeFare(SuperExpressSurcharge superExpressSurcharge, Station departure, Station destination){
-        if(!superExpressSurcharge.isSuperExpress()){
+    public Fare surchargeFare(SuperExpressSurcharge superExpressSurcharge, Route route) {
+        if (!superExpressSurcharge.isSuperExpress()) {
             return new Fare(0);
         }
-        return superExpressSurchargeRepository.findSuperSurcharge(departure,destination);
+        return superExpressSurchargeRepository.findSuperSurcharge(route);
 
     }
 

@@ -1,10 +1,12 @@
 package jrpricing.domain.model.superExpressSurcharge.freeSeat;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @AllArgsConstructor
-public class FreeSeat {
+@EqualsAndHashCode
+public class SeatTypeName {
     @Getter
-    private final boolean freeSeat;
+    private final String seatTypeName;
 }

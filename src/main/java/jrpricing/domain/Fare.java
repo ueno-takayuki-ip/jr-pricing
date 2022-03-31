@@ -14,6 +14,10 @@ public class Fare {
         return new Fare(value + fare.value);
     }
 
+    public Fare subtract(Fare fare) {
+        return new Fare(value - fare.value);
+    }
+
     public Fare truncate() {
         return new Fare((int) Math.floor(value / 10) * 10);
     }
