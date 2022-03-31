@@ -1,4 +1,4 @@
-package domain;
+package jrpricing.domain.model.superExpressType;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -6,7 +6,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Fare {
+public class SuperExpressType {
     @Getter
-    private final int value;
+    private final SuperExpressTypeName superExpressTypeName;
 }
